@@ -16,9 +16,9 @@ export default function DetailLink() {
   //router.refresh()
   //router.prefetch("/") => "/" 해당 페이지 미리 로드 => 빠르게 이동 // Link랑 같은 기능임
 
-  console.log(usePathname());
-  console.log(useSearchParams());
-  console.log(useParams());
+  // console.log(usePathname());
+  // console.log(useSearchParams());
+  // console.log(useParams());
   return (
     <button
       onClick={() => {

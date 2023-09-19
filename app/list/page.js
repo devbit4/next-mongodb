@@ -6,9 +6,9 @@ import ListItem from './ListItem';
 export const dynamic = 'force-dynamic';
 
 export default async function List() {
-  const db = (await connectDB).db('forum');
-
-  let result = await db.collection('post').find().toArray();
+  const result = await fetch(
+    `${process.env.BASE_FETCH_URL}/api/post/list`
+  ).then((res) => res.json());
 
   return (
     <div className='list-bg'>
