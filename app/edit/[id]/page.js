@@ -1,12 +1,8 @@
-import { connectDB } from '@/util/database';
-import { ObjectId } from 'mongodb';
-
 export default async function Edit(props) {
-  const db = (await connectDB).db('forum');
-
-  let result = await db
-    .collection('post')
-    .findOne({ _id: new ObjectId(`${props.params.id}`) });
+  const result = await fetch(
+    `${process.env.BASE_FETCH_URL}/api/post/item?id=${props.params.id}`,
+    { cache: 'no-store' }
+  ).then((res) => res.json());
 
   return (
     <div>

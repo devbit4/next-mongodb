@@ -1,6 +1,7 @@
 export default async function Detail(props) {
   const result = await fetch(
-    `${process.env.BASE_FETCH_URL}/api/post/item?id=${props.params.id}`
+    `${process.env.BASE_FETCH_URL}/api/post/item?id=${props.params.id}`,
+    { cache: 'no-store' }
   ).then((res) => res.json());
 
   return (

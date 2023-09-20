@@ -1,5 +1,6 @@
 import { MongoClient } from 'mongodb';
-const url = 'mongodb+srv://devbit4:devbit1234@cluster0.bvswk6p.mongodb.net/';
+const url =
+  'mongodb+srv://devbit4:devbit1234@cluster0.bvswk6p.mongodb.net/forum';
 const options = { useNewUrlParser: true };
 let connectDB;
 
